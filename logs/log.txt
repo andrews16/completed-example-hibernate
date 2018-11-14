@@ -1,0 +1,211 @@
+2018-11-10 13:56:38 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 13:58:54 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 14:16:04 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 14:16:29 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 14:16:51 WARN  ExceptionHandlerLoggedImpl:27 - GenerationTarget encountered exception accepting command : Error executing DDL "alter table public.stock add column STOCK_NAME varchar(20) not null" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table public.stock add column STOCK_NAME varchar(20) not null" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:559)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:580)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.migrateTable(AbstractSchemaMigrator.java:297)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:75)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:207)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:114)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:183)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:310)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:467)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:708)
+	at com.mkyong.persistence.HibernateUtil.buildSessionFactory(HibernateUtil.java:61)
+	at com.mkyong.persistence.HibernateUtil.<clinit>(HibernateUtil.java:20)
+	at com.mkyong.common.App.<clinit>(App.java:7)
+Caused by: org.postgresql.util.PSQLException: ERROR: column "stock_name" contains null values
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:307)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:293)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:270)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:266)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 14 more
+2018-11-10 14:16:51 WARN  SqlExceptionHelper:137 - SQL Error: 0, SQLState: 42703
+2018-11-10 14:16:51 ERROR SqlExceptionHelper:142 - ERROR: column "stock_name" of relation "stock" does not exist
+  Position: 32
+2018-11-10 14:17:33 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 14:18:13 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 14:18:35 WARN  SqlExceptionHelper$StandardWarningHandler:230 - SQL Warning Code: 0, SQLState: 00000
+2018-11-10 14:18:35 WARN  SqlExceptionHelper$StandardWarningHandler:231 - table "stocks" does not exist, skipping
+2018-11-10 15:39:04 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 17:35:40 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 17:38:31 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 17:38:52 WARN  SqlExceptionHelper$StandardWarningHandler:230 - SQL Warning Code: 0, SQLState: 00000
+2018-11-10 17:38:52 WARN  SqlExceptionHelper$StandardWarningHandler:231 - table "stock_details" does not exist, skipping
+2018-11-10 18:31:57 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 18:35:29 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 19:01:56 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 19:08:28 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 19:09:32 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 19:09:50 WARN  ExceptionHandlerLoggedImpl:27 - GenerationTarget encountered exception accepting command : Error executing DDL "alter table stock_daily_records drop constraint FKio1y6xpcuoyc5jr6hj8qw6hjb" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table stock_daily_records drop constraint FKio1y6xpcuoyc5jr6hj8qw6hjb" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:331)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:230)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:144)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:310)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:467)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:708)
+	at com.mkyong.persistence.HibernateUtil.buildSessionFactory(HibernateUtil.java:74)
+	at com.mkyong.persistence.HibernateUtil.<clinit>(HibernateUtil.java:22)
+	at com.mkyong.common.App.<clinit>(App.java:12)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "stock_daily_records" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:307)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:293)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:270)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:266)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 15 more
+2018-11-10 19:09:51 WARN  SqlExceptionHelper$StandardWarningHandler:230 - SQL Warning Code: 0, SQLState: 00000
+2018-11-10 19:09:51 WARN  SqlExceptionHelper$StandardWarningHandler:231 - table "stock_daily_records" does not exist, skipping
+2018-11-10 19:11:16 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 19:12:27 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 19:18:03 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 19:20:07 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 19:21:02 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 19:21:30 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 19:23:50 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 19:26:08 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 19:27:21 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 19:30:25 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 19:30:34 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 19:33:32 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 19:40:42 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 19:51:54 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 19:52:55 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 19:53:13 WARN  SqlExceptionHelper:137 - SQL Error: 0, SQLState: 23505
+2018-11-10 19:53:13 ERROR SqlExceptionHelper:142 - ERROR: duplicate key value violates unique constraint "uk_5neccx9tq8xukgj8bp9grhby3"
+  Detail: Key (stock_code)=(GOOG) already exists.
+2018-11-10 19:54:19 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 19:55:07 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 19:55:25 WARN  SqlExceptionHelper:137 - SQL Error: 0, SQLState: 23505
+2018-11-10 19:55:25 ERROR SqlExceptionHelper:142 - ERROR: duplicate key value violates unique constraint "uk_5neccx9tq8xukgj8bp9grhby3"
+  Detail: Key (stock_code)=(APL) already exists.
+2018-11-10 19:56:20 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 19:56:39 WARN  SqlExceptionHelper:137 - SQL Error: 0, SQLState: 23505
+2018-11-10 19:56:39 ERROR SqlExceptionHelper:142 - ERROR: duplicate key value violates unique constraint "uk_5neccx9tq8xukgj8bp9grhby3"
+  Detail: Key (stock_code)=(APL) already exists.
+2018-11-10 19:57:12 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 20:00:50 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 20:35:29 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 20:35:51 WARN  SqlExceptionHelper:137 - SQL Error: 0, SQLState: 23505
+2018-11-10 20:35:51 ERROR SqlExceptionHelper:142 - ERROR: duplicate key value violates unique constraint "uk_1jaths0ga1kl2iktcghefsqe6"
+  Detail: Key (date)=(2018-11-10) already exists.
+2018-11-10 20:37:06 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 20:38:43 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 20:39:33 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 20:39:57 WARN  SqlExceptionHelper:137 - SQL Error: 0, SQLState: 23505
+2018-11-10 20:39:57 ERROR SqlExceptionHelper:142 - ERROR: duplicate key value violates unique constraint "uk_1jaths0ga1kl2iktcghefsqe6"
+  Detail: Key (date)=(2018-11-10) already exists.
+2018-11-10 20:40:35 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 20:40:56 WARN  SqlExceptionHelper:137 - SQL Error: 0, SQLState: 23505
+2018-11-10 20:40:56 ERROR SqlExceptionHelper:142 - ERROR: duplicate key value violates unique constraint "uk_1jaths0ga1kl2iktcghefsqe6"
+  Detail: Key (date)=(2018-11-10) already exists.
+2018-11-10 20:44:07 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 20:49:22 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 20:51:48 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 20:52:46 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 20:53:54 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 21:20:21 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 21:20:47 WARN  SqlExceptionHelper:137 - SQL Error: 0, SQLState: 23505
+2018-11-10 21:20:47 ERROR SqlExceptionHelper:142 - ERROR: duplicate key value violates unique constraint "uk_1jaths0ga1kl2iktcghefsqe6"
+  Detail: Key (date)=(2018-11-10) already exists.
+2018-11-10 21:22:11 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 22:47:16 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 22:56:24 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 23:00:48 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 23:26:10 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 23:29:52 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 23:35:12 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 23:37:43 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 23:38:33 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 23:43:22 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 23:46:53 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 23:50:33 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 23:50:54 WARN  SqlExceptionHelper:137 - SQL Error: 0, SQLState: 22001
+2018-11-10 23:50:54 ERROR SqlExceptionHelper:142 - ERROR: value too long for type character varying(10)
+2018-11-10 23:52:47 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 23:53:11 WARN  SqlExceptionHelper:137 - SQL Error: 0, SQLState: 23505
+2018-11-10 23:53:11 ERROR SqlExceptionHelper:142 - ERROR: duplicate key value violates unique constraint "uk_q0gn6utemx52eacx6lvahbt8o"
+  Detail: Key (name)=(CONSUMER) already exists.
+2018-11-10 23:54:04 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-10 23:54:27 WARN  SqlExceptionHelper:137 - SQL Error: 0, SQLState: 22001
+2018-11-10 23:54:27 ERROR SqlExceptionHelper:142 - ERROR: value too long for type character varying(10)
+2018-11-10 23:58:33 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 00:06:27 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 00:06:48 WARN  SqlExceptionHelper:137 - SQL Error: 0, SQLState: 23505
+2018-11-11 00:06:48 ERROR SqlExceptionHelper:142 - ERROR: duplicate key value violates unique constraint "uk_q0gn6utemx52eacx6lvahbt8o"
+  Detail: Key (name)=(ENTERTAINMENT) already exists.
+2018-11-11 00:08:31 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 00:08:57 WARN  SqlExceptionHelper:137 - SQL Error: 0, SQLState: 23505
+2018-11-11 00:08:57 ERROR SqlExceptionHelper:142 - ERROR: duplicate key value violates unique constraint "uk_5neccx9tq8xukgj8bp9grhby3"
+  Detail: Key (stock_code)=(999) already exists.
+2018-11-11 13:47:25 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 13:47:46 WARN  SqlExceptionHelper:137 - SQL Error: 0, SQLState: 23505
+2018-11-11 13:47:46 ERROR SqlExceptionHelper:142 - ERROR: duplicate key value violates unique constraint "uk_5neccx9tq8xukgj8bp9grhby3"
+  Detail: Key (stock_code)=(045) already exists.
+2018-11-11 14:00:45 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 14:02:16 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 14:10:17 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 14:11:01 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 14:14:03 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 14:14:24 FATAL App:81 - org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.mkyong.models.Stock.dailyRecords, could not initialize proxy - no Session
+2018-11-11 14:14:34 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 14:14:54 FATAL App:81 - org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.mkyong.models.Stock.dailyRecords, could not initialize proxy - no Session
+2018-11-11 14:28:31 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 14:39:24 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 14:42:41 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 14:43:01 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 14:44:43 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 14:47:18 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 14:47:38 FATAL App:73 - ONE
+2018-11-11 14:47:38 FATAL App:75 - TWO
+2018-11-11 14:49:31 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 14:49:52 FATAL App:74 - ONE
+2018-11-11 14:49:52 FATAL App:76 - TWO
+2018-11-11 14:52:01 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 14:52:21 WARN  SqlExceptionHelper:137 - SQL Error: 0, SQLState: 23505
+2018-11-11 14:52:21 ERROR SqlExceptionHelper:142 - ERROR: duplicate key value violates unique constraint "uk_q0gn6utemx52eacx6lvahbt8o"
+  Detail: Key (name)=(INVESTMENT) already exists.
+2018-11-11 14:55:10 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 15:05:06 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 15:06:12 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 15:06:59 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 15:07:20 FATAL App:74 - ONE
+2018-11-11 15:07:20 FATAL App:76 - TWO
+2018-11-11 15:11:34 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 15:11:56 FATAL App:74 - ONE
+2018-11-11 15:11:56 FATAL App:76 - TWO
+2018-11-11 15:13:54 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 15:14:15 FATAL App:74 - ONE
+2018-11-11 15:14:15 FATAL App:76 - TWO
+2018-11-11 15:14:16 FATAL App:79 - THREE
+2018-11-11 15:14:16 FATAL App:82 - FOUR
+2018-11-11 15:30:56 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-11-11 15:31:16 FATAL App:74 - ONE
+2018-11-11 15:31:16 FATAL App:76 - TWO
+2018-11-11 15:31:17 FATAL App:79 - THREE
+2018-11-11 15:31:17 FATAL App:82 - FOUR
+2018-11-11 15:36:58 WARN  DriverManagerConnectionProviderImpl:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
